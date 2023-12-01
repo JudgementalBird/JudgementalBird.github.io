@@ -1,0 +1,75 @@
+body {
+    background-color: #3A3F3F;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+/* container that holds both columns */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    /*padding: 6%; *//* Adjust as needed */
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em; /* Adjust as needed */
+    text-decoration: underline;
+    margin: 1em 0;
+}
+
+ul {
+    font-size: 1.2em; /* Adjust as needed */
+    padding-left: 17%;
+}
+
+/* Lego */
+.column.left {
+    background-color: rgba(101, 124, 142, 0.3);
+}
+
+/* Modeller */
+.column.right {
+    background-color: rgba(70, 137, 97, 0.25);
+}
+
+.column {
+    border: 3px solid #8F8F8F;
+    border-radius: 20px;
+    padding: 2%; /* Adjust as needed */
+    width: 30%; /* Adjust as needed */
+    background-color: #8F8F8F; /* Box color */
+    display: flex; /* Use flex layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content to the left */
+}
+
+.column h2 {
+    text-align: center;
+    font-size: 2.4em; /* Adjust as needed */
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 1.2%;
+}
+
+.item {
+    padding: 1em 0.5em;
+    border-bottom: 1px solid #8F8F8F;
+}
+
+a {
+    color: #07A2E0;
+    text-decoration: none;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack columns on top of each other */
+    }
+
+    .column {
+        width: 100%; /* Full width for columns on small screens */
+    }
+}

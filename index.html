@@ -1,45 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wish List</title>
-<style>
-    body {
-        background-color: #3A3F3F; /* Dark grey background */
-        color: white; /* White text color */
-        font-family: 'Arial', sans-serif; /* Default font */
-        text-align: center; /* Center-align text */
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-        text-decoration: underline; /* Underline heading */
-        margin: 50px 0; /* Space above and below heading */
-    }
-    ul {
-        list-style-type: none; /* No bullets for list items */
-        padding: 0; /* No padding for list */
-    }
-    li a {
-        color: white; /* White text color for links */
-        text-decoration: none; /* No underline for links */
-        padding: 5px; /* Padding around links */
-        display: block; /* Make the links block elements */
-    }
-    li a:hover {
-        text-decoration: underline; /* Underline links on hover */
-    }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ønskeliste🙏</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="toptext">
 
-<h1>Julegave-ønsker</h1>
-<ul>
-    <li><a href="https://placeholder.com/link1">Link 1</a></li>
-    <li><a href="https://placeholder.com/link2">Link 2</a></li>
-    <li><a href="https://placeholder.com/link3">Link 3</a></li>
-</ul>
-
+  </div>
+  <h1>Julegave-ønsker</h1>
+  <div class="container">
+    <!-- Lego column -->
+    <div class="column left">
+      <h2>Lego</h2>
+      <ul id="lego-list"></ul> <!-- Use an unordered list for Lego items -->
+    </div>
+    
+    <!-- Models column -->
+    <div class="column right">
+      <h2>Modeller</h2>
+      <ul id="modeller-list"></ul> <!-- Use an unordered list for Modeller items -->
+    </div>
+  </div>
+  <script src="code.js"></script>
 </body>
 </html>
