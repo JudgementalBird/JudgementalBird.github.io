@@ -1,75 +1,72 @@
+/*background*/
 body {
-    background-color: #3A3F3F;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #FFFFFF;
+    background: #080a0e;
+    /*background: linear-gradient(180deg, rgba(200,202,206,1) 0%, rgba(70,69,114,1) 59%, rgba(2,17,46,1) 100%); */
 }
 
-/* container that holds both columns */
-.container {
-    display: flex;
-    justify-content: space-evenly;
-    /*padding: 6%; *//* Adjust as needed */
+/*images in normal grid view*/
+.gallery-img {
+    width: 230px;
+    height: 230px;
+    margin: 1vmin;
+    cursor: pointer;
+    transition: transform 0.09s;
+    border-radius: 8px;
+    border: 3px groove #203D1C;
+    object-fit: cover; /*here cuz crop, dont squash*/
 }
 
-h1 {
-    text-align: center;
-    font-size: 3em; /* Adjust as needed */
-    text-decoration: underline;
-    margin: 1em 0;
+.gallery-img:hover {
+    transform: scale(1.05); /*zoom on hover*/
+    border-radius: 4px;
 }
 
-ul {
-    font-size: 1.2em; /* Adjust as needed */
-    padding-left: 17%;
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*enable scroll if needed*/
+    background-color: rgb(0,0,0); /*fallback color*/
+    background-color: rgba(0,0,0,0.9); /*black w/ opacity*/
 }
 
-/* Lego */
-.column.left {
-    background-color: rgba(101, 124, 142, 0.3);
+.modal-content {
+    margin: auto;
+    display: block;
+    margin: auto;
+    display: block;
+    border-radius: 8px;
 }
 
-/* Modeller */
-.column.right {
-    background-color: rgba(70, 137, 97, 0.25);
+.modal-content {
+    animation-name: zoom;
+    animation-duration: 0.2s;
 }
 
-.column {
-    border: 3px solid #8F8F8F;
-    border-radius: 20px;
-    padding: 2%; /* Adjust as needed */
-    width: 30%; /* Adjust as needed */
-    background-color: #8F8F8F; /* Box color */
-    display: flex; /* Use flex layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: flex-start; /* Align content to the left */
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
 }
 
-.column h2 {
-    text-align: center;
-    font-size: 2.4em; /* Adjust as needed */
-    border-bottom: 2px solid #FFFFFF;
-    padding-bottom: 1.2%;
+/*close button*/
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.item {
-    padding: 1em 0.5em;
-    border-bottom: 1px solid #8F8F8F;
-}
-
-a {
-    color: #07A2E0;
+.close:hover,
+.close:focus {
+    color: #bbb;
     text-decoration: none;
-}
-
-/* Media Query for smaller screens */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack columns on top of each other */
-    }
-
-    .column {
-        width: 100%; /* Full width for columns on small screens */
-    }
+    cursor: pointer;
 }
